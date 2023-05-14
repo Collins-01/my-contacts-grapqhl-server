@@ -1,15 +1,13 @@
 import { ObjectType, Field, Int } from '@nestjs/graphql';
-import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
 @ObjectType()
 // @Entity('contacts')
-export class ContactEntity {
+export class Contact {
   @Field(() => Int)
   // @PrimaryGeneratedColumn()
   id: number;
 
   @Field()
-  @Column()
   name: string;
 
   @Field()
